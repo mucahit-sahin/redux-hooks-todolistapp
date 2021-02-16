@@ -1,3 +1,48 @@
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  justify-content: center;
+  background-color: #7ac70c;
+  border-radius: 10px;
+}
+form {
+  display: flex;
+  flex: 1;
+}
+form > input {
+  flex: 0.8;
+  margin-right: 10px;
+  font-size: 2rem;
+  border-radius: 10px;
+  border-width: 0px;
+}
+form > button {
+  flex: 0.2;
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 1rem;
+  background-color: #faa918;
+  color: white;
+  border-radius: 10px;
+  border-width: 0px;
+}
+ul > li {
+  color: #e53838;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+ul > li > span {
+  margin-left: auto;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: red;
 }

@@ -1,18 +1,18 @@
 import { createStore } from "redux";
+import { v4 as uuid } from "uuid";
+
 const initialstate = {
   todos: [
-    { id: 1, name: "React" },
-    { id: 2, name: "Javascript" },
+    { id: uuid(), name: "React" },
+    { id: uuid(), name: "Javascript" },
   ],
 };
 
-export const store = createStore(reducer, initialstate);
-
 function reducer(state, action) {
   switch (action.type) {
-    case "Add":
+    case "ADD_TODO":
       return { ...state, todos: [...state.todos, action.payload] };
-    case "Delete":
+    case "DELETE_TODO":
       return {
         ...state,
         todos: state.todos.filter((todo) => todo.id !== action.payload),
@@ -21,3 +21,5 @@ function reducer(state, action) {
       return state;
   }
 }
+
+export const store = createStore(reducer, initialstate);

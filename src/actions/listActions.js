@@ -1,9 +1,9 @@
 //actions
 export const addTodoAction = (todo) => ({
-  type: "Add",
+  type: "ADD_TODO",
   payload: todo,
 });
 export const deleteTodoAction = (todoId) => ({
-  type: "Delete",
+  type: "DELETE_TODO",
   payload: todoId,
 });
